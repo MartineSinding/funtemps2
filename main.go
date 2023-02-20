@@ -3,7 +3,7 @@ package main
 import (
     "flag"
     "fmt"
-    "funtemps2/conv"
+    "is105/github.com/MartineSinding/funtemps2/conv"
 )
 
 var fahrenheit float64
