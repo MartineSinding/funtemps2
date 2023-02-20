@@ -1,11 +1,10 @@
 package main
 
 import (
-	"flag"
-	"fmt"
-	"is105test/conv"
+    "flag"
+    "fmt"
+    "is105test/conv"
 )
-
 
 var fahrenheit float64
 var celsius float64
@@ -13,7 +12,7 @@ var kelvin float64
 var out string
 
 func init() {
-	flag.Float64Var(&fahrenheit, "F", 0.0, "temperatur i grader fahrenheit")
+    flag.Float64Var(&fahrenheit, "F", 0.0, "temperatur i grader fahrenheit")
     flag.Float64Var(&celsius, "C", 0.0, "temperatur i grader celsius")
     flag.Float64Var(&kelvin, "K", 0.0, "temperatur i grader kelvin")
     flag.StringVar(&out, "out", "C", "beregne temperatur i C - celsius, F - farhenheit, K- Kelvin")
@@ -29,14 +28,13 @@ func main() {
         }
     }
 
-	if isFlagPassed("out") {
+    if isFlagPassed("out") {
         if out == "K" && isFlagPassed("C") {
             fmt.Println(conv.KelvinToCelsius(celsius))
         } else if out == "C" && isFlagPassed("K") {
             fmt.Println(conv.CelsiusToKelvin(kelvin))
         }
     }
-
 
     if isFlagPassed("out") {
         if out == "K" && isFlagPassed("F") {
@@ -56,4 +54,3 @@ func isFlagPassed(name string) bool {
     })
     return found
 }
-
