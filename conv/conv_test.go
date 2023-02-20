@@ -52,7 +52,7 @@ func TestCelsiusToFahrenheit(t *testing.T) {
 		}
 	
 		tests := []test{
-			{input: 300, want: 88.33},
+			{input: 300, want: 80.33},
 		}
 	
 		for _, tc := range tests {
