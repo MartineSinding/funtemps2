@@ -32,5 +32,18 @@ func FahrenheitToKelvin(value float64) float64 {
     return math.Round(kelvin*100) / 100
 }
 
+func CelciusToCelsius(value float64) float64 {
+    celsius := value
+    return celsius
+}
 
+func FahrenheitToFahrenheit(value float64) float64 {
+    fahrenheit := value
+    return fahrenheit
+}
+
+func KelvinToKelvin(value float64) float64 {
+    kelvin := value
+    return kelvin
+}
 
